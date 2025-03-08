@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Fake Job Detection Extension</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1.2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background-color: #f0f2f5;
+            color: #0077b5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 7rem auto 2rem;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #0077b5;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #005582;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,119,181,0.2);
+        }
+
+        .free-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .policy-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: none;
+        }
+
+        .policy-content.active {
+            display: block;
+        }
+
+        #home-content.active {
+            display: block;
+        }
+
+        #home-content {
+            display: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #0077b5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #005582;
+        }
+
+        .heart {
+            color: #ff4f4f;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#policy">Privacy Policy</a>
+    </nav>
+
+    <div class="container">
+        <div id="home-content" class="active">
+            <div class="hero">
+                <img src="https://i.ibb.co/npCxJNx/chrome-extension-logo-1.png" alt="Extension Logo" class="logo">
+                <h1>LinkedIn Fake Job Detection Extension</h1>
+                <p>Protect yourself from fraudulent job postings with our AI-powered LinkedIn job detection extension. This intelligent tool analyzes job listings in real-time to identify potential scams and suspicious patterns, helping you focus on legitimate opportunities.</p>
+                <a href="https://chrome.google.com/webstore" class="cta-button">Add to Chrome</a>
+                <div class="free-badge">TOTALLY FREE</div>
+            </div>
+        </div>
+
+        <div id="policy-content" class="policy-content">
+            <h2>Privacy Policy for LinkedIn Job Post Analyzer</h2>
+            <p style="color: #666; margin-top: 0.5rem;">Last Updated: March 2025</p>
+
+            <div style="margin-top: 2rem;">
+                <h3>1. Introduction</h3>
+                <p>Thank you for using the LinkedIn Job Post Analyzer ("Extension"). This privacy policy outlines how we handle user data and disclaimers regarding AI-generated content.</p>
+
+                <h3>2. No Data Collection or Storage</h3>
+                <p>We are committed to protecting your privacy. This extension:</p>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                    <li>Does not collect, store, or share any personal data.</li>
+                    <li>Does not track your browsing history or interactions.</li>
+                    <li>Does not require account registration or authentication.</li>
+                    <li>Does not send or store any user-inputted data on external servers.</li>
+                </ul>
+
+                <h3>3. How the Extension Works</h3>
+                <ul style="margin-left: 2rem;">
+                    <li>Users can paste job post content into the extension for analysis.</li>
+                    <li>The extension uses OpenAI's API to assess whether a job post is genuine or fake.</li>
+                    <li>The analysis is performed in real time and does not store or save any data.</li>
+                </ul>
+
+                <h3>4. Use of AI and Accuracy Disclaimer</h3>
+                <ul style="margin-left: 2rem;">
+                    <li>This extension relies on AI-generated analysis, which may not always be 100% accurate.</li>
+                    <li>Results are for informational purposes only and should not be considered as professional advice.</li>
+                    <li>The extension does not guarantee the authenticity of job posts and is not responsible for any decisions made based on its output.</li>
+                </ul>
+
+                <h3>5. No Liability</h3>
+                <p>By using this extension, you acknowledge that:</p>
+                <ul style="margin-left: 2rem;">
+                    <li>The developers are not responsible for any inaccuracies in AI-generated results.</li>
+                    <li>You should independently verify job listings before taking any action.</li>
+                    <li>The extension does not endorse, verify, or confirm any job postings.</li>
+                </ul>
+
+                <h3>6. Third-Party Services</h3>
+                <ul style="margin-left: 2rem;">
+                    <li>This extension uses OpenAI's API for content analysis.</li>
+                    <li>OpenAI may process the text you input, subject to their own privacy policy.</li>
+                    <li>We do not control or store any data sent to OpenAI's API.</li>
+                </ul>
+
+                <h3>7. Changes to This Policy</h3>
+                <ul style="margin-left: 2rem;">
+                    <li>We may update this policy as needed. Any changes will be reflected in the "Last Updated" section above.</li>
+                    <li>Continued use of the extension constitutes acceptance of any updates.</li>
+                </ul>
+
+                <h3>8. Contact Information</h3>
+                <p>If you have any questions about this privacy policy, you can contact us through <a href="https://www.linkedin.com/in/krushnamodhave/" target="_blank" style="color: #0077b5; text-decoration: none;">LinkedIn</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Made with <span class="heart">♥</span> by <a href="https://www.linkedin.com/in/krushnamodhave/" target="_blank">Krushna Modhave</a></p>
+        <p>© 2025 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            document.getElementById('home-content').classList.remove('active');
+            document.getElementById('policy-content').classList.remove('active');
+            document.getElementById(section + '-content').classList.add('active');
+        }
+
+        // Handle initial load and URL changes
+        function handleRoute() {
+            const hash = window.location.hash.slice(1) || 'home';
+            showContent(hash);
+        }
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleRoute);
+        
+        // Handle initial page load
+        handleRoute();
+    </script>
+</body>
+</html>
